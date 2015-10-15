@@ -8,27 +8,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bit2015.mysite.action.main.MainActionFactory;
-import com.bit2015.mysite.action.member.MemberActionFactory;
+import com.bit2015.mysite.action.board.BoardActionFactory;
+import com.bit2015.mysite.action.guestbook.GuestBookActionFactory;
 import com.bit2015.web.action.Action;
 import com.bit2015.web.action.ActionFactory;
 
-@WebServlet("/member")
-public class MemberServlet extends HttpServlet {
+
+@WebServlet("/board")
+public class BoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost( request, response );
+		doPost(request,response);
 	}
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		request.setCharacterEncoding( "UTF-8" );
+		String actionName = request.getParameter("a");
+		ActionFactory af = new BoardActionFactory();
 		
-		String actionName = request.getParameter( "a" );
-		ActionFactory af = new MemberActionFactory();
-		
-		Action action = af.getAction( actionName );
-		action.execute(request, response);	
+		Action action = af.getAction(actionName);
+		action.execute(request, response);
 	}
 
 }

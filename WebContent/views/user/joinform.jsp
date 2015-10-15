@@ -8,12 +8,13 @@
 </head>
 <body>
 	<div id="container">
-		<jsp:include page="/views/include/header.jsp" flush="false"></jsp:include>
+		<jsp:include page="/views/include/header.jsp"></jsp:include>
 		<div id="content">
 			<div id="user">
 
-				<form id="join-form" name="joinForm" method="post" action="/mysite/Member?a=joinsueccess">
-				<input type = "hidden" name ="a" value="join">
+				<form id="join-form" name="joinForm" method="post" action="/mysite/member?a=join">
+<!-- 					<input type="hidden" name="a" value="join"> -->
+					
 					<label class="block-label" for="name">이름</label>
 					<input id="name" name="name" type="text" value="">
 
@@ -41,8 +42,8 @@
 				</form>
 			</div>
 		</div>
-			<jsp:include page="/views/include/navication.jsp" ></jsp:include>
-		<jsp:include page="/views/include/footer.jsp" ></jsp:include>
+		<jsp:include page="/views/include/navication.jsp"></jsp:include>
+		<jsp:include page="/views/include/footer.jsp"></jsp:include>
 	</div>
 </body>
 </html>

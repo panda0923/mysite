@@ -19,6 +19,6 @@ public class WebUtil {
 	public static void redirect(
 	 HttpServletResponse response,String url
 	 )throws ServletException,IOException{
-		
+		response.sendRedirect( url );
 	}
 }

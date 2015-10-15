@@ -20,10 +20,16 @@
 					<input type='hidden' name="no" value="<%=no %>">
 					<label>비밀번호</label>
 					<input type="password" name="password">
-					<input type="submit" value="확인">
+				
+				
+					<p>
+						잘못 입력하셨습니다.
+					</p>
+		
+						<input type="submit" value="확인">
 					
 				</form>
-				<a href="/mysite/guest?a=list">방명록 리스트</a>
+				<a href="">방명록 리스트</a>
 			</div>
 		</div>
 		<jsp:include page="/views/include/navication.jsp" ></jsp:include>

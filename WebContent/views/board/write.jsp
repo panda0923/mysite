@@ -1,3 +1,13 @@
+<%@ page import="com.bit2015.mysite.vo.BoardVo" %>
+<%@page import="java.util.List"%>
+<% 
+List<BoardVo> list = 
+	
+(List<BoardVo>)request.getAttribute( "list" );
+
+BoardVo vo = new BoardVo();
+
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,8 +21,9 @@
 		<jsp:include page="/views/include/header.jsp" flush="false"></jsp:include>
 		<div id="content">
 			<div id="board">
+			
 				<form class="board-form" method="post" action="/mysite/board">
-					<input type = "hidden" name = "a" value="write">
+					<input type = "hidden" name = "a" value="write"> 
 					<table class="tbl-ex">
 						<tr>
 							<th colspan="2">글쓰기</th>
@@ -29,7 +40,7 @@
 						</tr>
 					</table>
 					<div class="bottom">
-						<a href="/mysite/board">취소</a>
+						<a href="/mysite/board?a=lista">취소</a>
 						<input type="submit" value="등록">
 					</div>
 				</form>				

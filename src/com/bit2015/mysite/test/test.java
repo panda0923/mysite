@@ -3,14 +3,17 @@ package com.bit2015.mysite.test;
 import java.util.List;
 
 
+
+
+import com.bit2015.mysite.vo.BoardVo;
 import com.bit2015.mysite.vo.GuestbookVo;
 import com.bit2015.mysite.vo.MemberVo;
+import com.bit2015.mysite.dao.BoardDao;
 import com.bit2015.mysite.dao.GuestBookDao;
 import com.bit2015.mysite.dao.MemberDao;
 public class test {
 	public static void main(String[] args) {
-		getTest();
-		//updateTest();
+		getListtest();
 	}
 
 
@@ -30,10 +33,10 @@ public class test {
 		
 	}
 	public static void getListtest(){
-		GuestBookDao dao = new GuestBookDao();
-		List<GuestbookVo> list = dao.getList();
+		BoardDao dao = new BoardDao();
+		List<BoardVo> list = dao.getList();
 	
-		for(GuestbookVo vo :list){
+		for(BoardVo vo :list){
 			System.out.println(vo);
 		}
 	}

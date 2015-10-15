@@ -26,7 +26,13 @@ public class LoginAction implements Action {
 		
 		//로그인 실패
 		if(vo==null){
-			WebUtil.redirect(response, "/mysite/Member?a=loginform");
+			//실패처리 1
+			//WebUtil.forwarding(request, response,"/views/loginform_error.jsp");
+			WebUtil.redirect( response, "/mysite/member?a=loginform&result=error" );
+			//실패처리 2 
+			
+			
+			//WebUtil.redirect(response, "/mysite/Member?a=loginform");
 			return;
 		}
 		//로그인 처리

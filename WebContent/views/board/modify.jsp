@@ -11,7 +11,7 @@
 		<jsp:include page="/views/include/header.jsp" flush="false"></jsp:include>
 		<div id="content">
 			<div id="board">
-				<form class="board-form" method="post" action="">
+				<form class="board-form" method="post" action="/mysite/board?a=modify">
 					<table class="tbl-ex">
 						<tr>
 							<th colspan="2">글수정</th>
@@ -32,7 +32,7 @@
 						</tr>
 					</table>
 					<div class="bottom">
-						<a href="">취소</a>
+						<a href="list.jsp">취소</a>
 						<input type="submit" value="수정">
 					</div>
 				</form>				
